@@ -141,7 +141,7 @@ prompt = PromptTemplate(input_variables=["history", "human_input"], template=tem
 llm_chain = LLMChain(llm=OpenAI(openai_api_key=openai_api_key, model_name="gpt-4-1106-preview"), prompt=prompt, memory=memory)
 
 
-max_user_inputs = 3
+max_user_inputs = 6
 
 if "num_user_inputs" not in st.session_state:
     st.session_state.num_user_inputs = len(st.session_state['tech_messages']) // 2
